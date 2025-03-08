@@ -1,0 +1,45 @@
+# Build and output directories
+/build/
+/bin/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+/cmake_install.cmake
+Makefile
+
+# Executable files (better to include them all)
+*.exe
+*.out
+*.app
+*.o
+*.so
+*.a
+*.dylib
+
+# Logs and debugging
+*.log
+*.stackdump
+*.core
+*.gch
+
+# IDE and editor files
+.vscode/
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.ncb
+*.vcxproj*
+*.xcodeproj
+*.DS_Store
+
+# Python virtual environments (may be used in the future)
+venv/
+__pycache__/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*.bak
