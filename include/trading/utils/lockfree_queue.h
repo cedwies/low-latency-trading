@@ -89,6 +89,7 @@ public:
     
     // Try to pop an element from the queue
     // Returns the element if successful, nullopt if the queue is empty
+    // Edit: I don't know yet if std::optional is the best choice regarding performance
     std::optional<T> try_pop() {
         size_t read_pos = queue_.read_pos.load(std::memory_order_relaxed);
         size_t write_pos = queue_.write_pos.load(std::memory_order_acquire);

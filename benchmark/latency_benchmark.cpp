@@ -331,7 +331,7 @@ void benchmark_cycle_counter() {
             uint64_t time = measure_time_ns([&]() {
                 uint64_t start = CycleCounter::start();
                 uint64_t end = CycleCounter::end();
-                g_dummy = end - start;  // Prevent optimization
+                g_dummy = end - start;  // Prevent optimization (!!)
             });
             
             times.push_back(time);
@@ -352,7 +352,7 @@ int main() {
     #ifdef _WIN32
     SetPriorityClass(GetCurrentProcess(), HIGH_PRIORITY_CLASS);
     #else
-    // On Linux, you might use nice or sched_setaffinity
+    // On Unix one could use sched_setaffinity or nice
     #endif
     
     // Run benchmarks
